@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Prediction App</title>
+</head>
+<body>
+    <h1>Stock Prediction App</h1>
+    <form action="/predict" method="POST">
+        <label for="stock">Stock Symbol:</label>
+        <input type="text" name="stock" id="stock">
+        <br>
+        <label for="start_date">Start Date:</label>
+        <input type="text" name="start_date" id="start_date" value="2015-01-01">
+        <br>
+        <label for="end_date">End Date:</label>
+        <input type="text" name="end_date" id="end_date" value="2021-12-31">
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

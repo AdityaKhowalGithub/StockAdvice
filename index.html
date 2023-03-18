@@ -1,13 +1,93 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stock Prediction App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Stock Prediction App</h1>
+    <form>
+        <label for="symbol">Enter a Stock Symbol:</label>
+        <input type="text" id="symbol" name="symbol" autocomplete="off" required>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+        <script>
+            $(function () {
+                var stocks = ["AAPL", "AMZN", "GOOG", "MSFT", "TSLA"];
+                $("#symbol").autocomplete({
+                    source: stocks
+                });
+            });
+        </script>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <div id="prediction"></div>
+    <canvas id="chart" width="400" height="200"></canvas>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,700&family=Gloock&family=PT+Serif&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>StockAdvice</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="searchWrapper">
+            <div class="search">
+                <div class="search__input">
+                    <input type="text" id="symbol" name="symbol" required placeholder="Search for a stock" />
+                </div> 
+                <div class="search__button">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="stockInfo">
+            <div class="stockInfo__title">
+                <p>Stock: </p>
+            </div>
+            <div class="stockInfo__price">
+                <p></p>
+            </div>
+            <div class="stockInfo__change">
+                <p>Over time</p>
+            </div>
+        </div>
+
+        <div class="graphWrapper">
+            <div class="graph">
+                <div class="graph__title">
+                    <h1>GRAPH</h1>
+                </div>
+                <div class="graph__image">
+                    <img src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/48b15668a5.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
-</html>
+
+</html> -->
